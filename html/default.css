@@ -11,18 +11,64 @@ figure,
 figcaption{
 	display: block;
 }
+html,
+body{
+	min-height: 100%;
+}
+body{
+	margin: 0;
+}
 
 /* All */
+body{
+	background: -webkit-linear-gradient(#ccc,#fff); 
+	background: -moz-linear-gradient(#ccc,#fff); 
+	background: -ms-linear-gradient(#ccc,#fff); 
+	background: -o-linear-gradient(#ccc,#fff); 
+	background: linear-gradient(#ccc,#fff); 
+}
+.header>h1{
+	font-size: 28px;
+	text-shadow:1px 1px 0 #fff;
+}
+.search>input{
+	vertical-align: top;
+	border-radius: 3px;
+}
+.search>[type="search"]{
+	border: 1px solid #ccc;
+	height: 32px;
+	width: 160px;
+	box-shadow: 0 0 4px #ccc inset;
+	margin-right: -4px
+}
+.search>[type="submit"]{
+	width: 50px;
+	height: 32px;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: 0 0 4px #aaa;
+}
 
 /* Mobile */
 
+
 /* Tablet & Desktop */
 @media (min-width: 768px){
-	body{
-		background: red;
-	}
+
 }
 
 /* Tablet */
+@media (min-width:768px) and (max-width:1024px){
+
+}
 
 /* Desktop */
+@media (min-width: 1025px){
+
+}
+
+
+
+
+
