@@ -19,11 +19,11 @@ body{
 	margin: 0;
 	min-width: 320px;
 }
-body, 
-table, 
-button, 
-input, 
-textarea, 
+body,
+table,
+button,
+input,
+textarea,
 select{
 	font-size: 14px;
 }
@@ -40,7 +40,8 @@ body{
 	font-size: 28px;
 	text-shadow:1px 1px 0 #fff;
 }
-.search>{
+
+.search>input{
 	vertical-align: top;
 	border-radius: 3px;
 }
@@ -49,7 +50,6 @@ body{
 	height: 32px;
 	width: 160px;
 	box-shadow: 0 0 4px #ccc inset;
-	margin-right: -4px
 }
 .search>[type="submit"]{
 	width: 50px;
@@ -66,10 +66,15 @@ main,
 main{
 	background: #fff;
 	box-shadow: 0 0 4px #999;
-	/* IE7, IE8만 해석, rgba는 CSS3 문법 */ 
-	box-shadow: 0 0 4px rgba(0,0,0,.3);	
+	box-shadow: 0 0 4px rgba(0,0,0,.3);
 	border-radius: 8px;
 	min-height: 300px;
+}
+.lnb ul,
+.aside ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 .lnb{
 	text-shadow:1px 1px 0 #333;
@@ -83,18 +88,13 @@ main{
 	line-height: 32px;
 	margin: 0;
 }
-.lnb ul,
-.aside ul{
-	margin: 0;
-	padding: 0;
-	list-style: none;
-}
+
 .lnb li{
 	margin: 1px 0;
 }
 .lnb a{
 	display: block;
-	background-color: #777;
+	background: #777;
 	padding: 0 10px;
 	height: 32px;
 	line-height: 34px;
@@ -102,7 +102,7 @@ main{
 	color: #fff;
 	-webkit-transition:.2s;
 	-moz-transition:.2s;
-	-mos-transition:.2s;
+	-ms-transition:.2s;
 	-o-transition:.2s;
 	transition:.2s;
 }
@@ -117,12 +117,11 @@ main{
 	border:1px solid #ddd;
 	border-radius: 4px;
 	padding: 0 10px;
-
 }
 .aside h2{
 	font-size: 14px;
 	margin: 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom:1px solid #ddd;
 	line-height: 32px;
 }
 .aside ul{
@@ -139,6 +138,7 @@ main{
 	text-align: center;
 	color: #959595;
 }
+
 /* Mobile */
 .container{
 	margin: 0 10px;
@@ -153,9 +153,8 @@ main{
 	margin: 0;
 }
 .gnb>button{
-	border: 0;
+	border:0;
 	background: #666;
-	/* 	background: #666 url(xxx.png) no-repeat; */
 	width: 40px;
 	height: 36px;
 	padding: 36px 0 0 0;
@@ -175,7 +174,6 @@ main{
 	height: 4px;
 	border-top: 12px double #fff;
 	border-bottom: 12px double #fff;
-
 }
 .gnb>ul{
 	background: #666;
@@ -186,7 +184,7 @@ main{
 .gnb ul{
 	margin: 0;
 	padding: 0;
-	list-style-position: none;
+	list-style: none;
 }
 .gnb a{
 	display: block;
@@ -197,7 +195,8 @@ main{
 	padding: 0 10px;
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow:ellipsis;
+	text-overflow: ellipsis;
+
 }
 .gnb>ul>li>a{
 	background: #444;
@@ -218,27 +217,23 @@ main{
 	width: 100%;
 }
 .search>[type="submit"]{
-	width: 50px 0;
+	width: 50px;
 	position: absolute;
 	top: 0;
 	right: 0;
 }
-/* Tablet & Desktop */
-@media (min-width: 768px){
 
+/* Tablet & Desktop */
+@media (min-width:768px){
+	
 }
 
 /* Tablet */
 @media (min-width:768px) and (max-width:1024px){
-
+	
 }
 
 /* Desktop */
-@media (min-width: 1025px){
-
+@media (min-width:1025px){
+	
 }
-
-
-
-
-
