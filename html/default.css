@@ -9,7 +9,7 @@ aside,
 main,
 figure,
 figcaption{
-	display :block;
+	display: block;
 }
 html,
 body{
@@ -26,14 +26,14 @@ input,
 textarea,
 select{
 	font-size: 14px;
-	font-family: sans-serif; /*웹폰트를 제공하는 서버에 이상이 있을 시 폰트가 지원되지 않기 때문에 예비 글꼴을 뒤에 작성하는 것이 좋다.*/
+	font-family: sans-serif;
 }
-img, 
+img,
 video{
 	max-width: 100%;
 	height: auto;
 }
-.vframe{ /*iframe은 너비정보에 대한 비율 정보를 가지고 있지 않기때문에 div로 감싸서 비율을 지정해 줌*/
+.vframe{
 	position: relative;
 	max-width: 100%;
 	height: 0;
@@ -48,40 +48,43 @@ video{
 
 /* All */
 @font-face {
-	font-family: 'Nanum Gothic'; /*공백이 있을 경우만 ''로 감싼다*/
-	font-style: normal;
-	font-weight: 400;
-	src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
-	src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
+  font-family: NG;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot);
+  src: url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
        url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff2) format('woff2'),
        url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.woff) format('woff'),
        url(https://fonts.gstatic.com/ea/nanumgothic/v5/NanumGothic-Regular.ttf) format('truetype');
 }
 body{
-	background: -webkit-linear-gradient(top,#ccc,#fff); 
-	background: -moz-linear-gradient(top,#ccc,#fff); 
-	background: -ms-linear-gradient(top,#ccc,#fff); 
-	background: -o-linear-gradient(top,#ccc,#fff); 
+	background: -webkit-linear-gradient(#ccc,#fff); 
+	background: -moz-linear-gradient(#ccc,#fff); 
+	background: -ms-linear-gradient(#ccc,#fff); 
+	background: -o-linear-gradient(#ccc,#fff); 
 	background: linear-gradient(#ccc,#fff); 
 }
 .header>h1{
 	font-size: 28px;
-	text-shadow:1px 1px 2px #fff; 
+	text-shadow:1px 1px 0 #fff;
+}
+.gnb *{
+	box-sizing:content-box;
 }
 .search>input{
 	vertical-align: top;
 	border-radius: 3px;
 }
 .search>[type="search"]{
-	width: 160px;
-	height: 32px;
 	border: 1px solid #ccc;
+	height: 32px;
+	width: 160px;
 	box-shadow: 0 0 4px #ccc inset;
 }
 .search>[type="submit"]{
-	background: #fff;
 	width: 50px;
 	height: 32px;
+	background: #fff;
 	border: 1px solid #ccc;
 	box-shadow: 0 0 4px #aaa;
 }
@@ -97,17 +100,17 @@ main{
 	border-radius: 8px;
 	min-height: 300px;
 }
+main>article{
+	padding: 15px;
+}
 .lnb ul,
 .aside ul{
 	margin: 0;
 	padding: 0;
 	list-style: none;
 }
-main>article{
-	padding: 15px;
-}
 .lnb{
-	text-shadow: 1px 1px 0 #333;
+	text-shadow:1px 1px 0 #333;
 }
 .lnb h2{
 	background: #666;
@@ -116,8 +119,9 @@ main>article{
 	color: #fff;
 	padding: 0 10px;
 	line-height: 32px;
-	margin : 0;
+	margin: 0;
 }
+
 .lnb li{
 	margin: 1px 0;
 }
@@ -129,29 +133,30 @@ main>article{
 	line-height: 34px;
 	text-decoration: none;
 	color: #fff;
-	-webkit-transition: .2s;
-	-moz-transition: .2s;
-	-ms-transition: .2s;
-	-o-transition: .2s;
-	transition: .2s;
+	-webkit-transition:.2s;
+	-moz-transition:.2s;
+	-ms-transition:.2s;
+	-o-transition:.2s;
+	transition:.2s;
+}
+.lnb :last-child>a{
+	border-radius: 0 0 4px 4px;
 }
 .lnb a:hover,
 .lnb a:focus{
 	background: #555;
 }
-.lnb :last-child>a{
-	border-radius: 0 0 4px 4px;
-}
 .aside{
-	border: 1px solid #ddd;
+	border:1px solid #ddd;
 	border-radius: 4px;
-	padding : 0 10px;
+	padding: 0 10px;
 	background: #fff;
+	box-sizing:content-box;
 }
 .aside h2{
 	font-size: 14px;
 	margin: 0;
-	border-bottom: 1px solid #ddd;
+	border-bottom:1px solid #ddd;
 	line-height: 32px;
 }
 .aside ul{
@@ -160,7 +165,6 @@ main>article{
 .aside a{
 	display: block;
 	line-height: 32px;
-	text-decoration: none;
 }
 .footer{
 	border-top: 1px dotted #ccc;
@@ -174,7 +178,6 @@ main>article{
 }
 .table{
 	border-collapse: collapse;
-	
 }
 .table th,
 .table td{
@@ -189,9 +192,16 @@ main>article{
 	vertical-align: top;
 	width: 14%;
 }
+.sign-up dt{
+	font-weight: bold;
+	font-size: 16px;
+}
+.sign-up input+label{
+	margin-right: 20px;
+}
 
 /* Mobile */
-.container{
+.ctnr{
 	margin: 0 10px;
 }
 .skip{
@@ -202,9 +212,10 @@ main>article{
 	position: absolute;
 	overflow: hidden;
 	margin: 0;
+	opacity: 0;
 }
 .gnb>button{
-	border: 0;
+	border:0;
 	background: #666;
 	width: 40px;
 	height: 36px;
@@ -215,9 +226,10 @@ main>article{
 	cursor: pointer;
 	top: 15px;
 	right: 10px;
+	box-sizing:border-box;
 }
 .gnb>button:before{
-	content: "";
+	content:"";
 	position: absolute;
 	top: 4px;
 	left: 4px;
@@ -225,11 +237,12 @@ main>article{
 	height: 4px;
 	border-top: 12px double #fff;
 	border-bottom: 12px double #fff;
+	box-sizing:content-box;
 }
 .gnb>ul{
 	background: #666;
 	border-radius: 4px;
-	overflow: hidden; /**/
+	overflow: hidden;
 	display: none;
 }
 .gnb ul{
@@ -241,22 +254,22 @@ main>article{
 	display: block;
 	background: #666;
 	color: #fff;
-	text-decoration: none;
 	line-height: 32px;
+	text-decoration: none;
 	padding: 0 10px;
-	/*말줄임표를 쓰기 위한 속성들*/
 	white-space: nowrap;
 	overflow: hidden;
-	text-overflow: ellipsis; /*ellipsis를 쓰려면 white-space:nowrap; overflow:hidden;이 있어야 함*/
+	text-overflow: ellipsis;
+
 }
 .gnb>ul>li>a{
 	background: #444;
 }
-.gnb li li{ /*.gnb>ul>li>ul>li*/
+.gnb li li{
 	border-top: 1px dotted #444;
 }
-.gnb li li:first-child{ /*.gnb>ul>li>ul>li:first-child*/
-	border: 0;
+.gnb li li:first-child{
+	border:0;
 }
 .search{
 	margin: 15px 0;
@@ -273,15 +286,15 @@ main>article{
 	top: 0;
 	right: 0;
 }
+
 /* Tablet & Desktop */
 @media (min-width:768px){
 	body,
 	table,
-	button,
 	input,
 	textarea,
-	select{
-		font-family: 'Nanum Gothic', sans-serif; /*웹폰트를 제공하는 서버에 이상이 있을 시 폰트가 지원되지 않기 때문에 예비 글꼴을 뒤에 작성하는 것이 좋다.*/
+	button{
+		font-family: NG, sans-serif;
 	}
 	.gnb>button{
 		display: none;
@@ -295,23 +308,21 @@ main>article{
 	}
 	.gnb{
 		margin-bottom: 15px;
-		/*position: relative;*/ /*1*/
+		position: relative;
 	}
 	.gnb>ul{
 		display: block !important;
 		height: 40px;
 		border-bottom: 40px solid #fff;
-		padding-left: 25px;
+		padding: 0 0 0 25px;
 		overflow: visible;
 		background: -webkit-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
 		background: -moz-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
 		background: -ms-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
 		background: -o-linear-gradient(#555 0%, #333 50%, #000 50%, #222 100%);
 		background: linear-gradient(to bottom, #555 0%, #333 50%, #000 50%, #222 100%);
-		/*(#555,#333,#000,#222); (to bottom, #555 0%, #333 33%, #000 66%, #222 100%)
-		to bottom은 최신 버전에서만 사용가능함.. 생략할 시 기본방향은 아래로..*/
 	}
-	.gnb ul ul{ /*.gnb ul>li>ul*/
+	.gnb ul ul{
 		display: none;
 	}
 	.gnb>ul>li{
@@ -324,17 +335,17 @@ main>article{
 		line-height: 40px;
 		padding: 0 25px;
 	}
-	.gnb>ul>.active>a{/*.gnb>ul>li.active>a*/
+	.gnb>ul>.active>a{
 		background: #fff !important;
 		color: #000;
-		font-weight: 700;/*font-weight: bold;*/
+		font-weight: 700;
 		margin-top: 4px;
 		line-height: 36px;
 		border-radius: 4px 4px 0 0;
 	}
-	.gnb>ul>.active>ul{/*.gnb>ul>li.active>ul*/
+	.gnb>ul>li.active>ul{
 		display: block;
-		/*left: 20px;*/ /*1*/
+		left: 20px;
 	}
 	.gnb ul ul{
 		position: absolute;
@@ -347,11 +358,8 @@ main>article{
 		color: #666;
 		line-height: 40px;
 	}
-	/*.body의 자식요소들에 모두 float 속성을 주기 때문에 
-	.body의 높이가 0이 되는 것을 방지하지 위한 것
-	clear:both;는 블럭요소에만 적용되기때문에 다음과 같이 설정*/
 	.body:after{
-		content: "";
+		content:"";
 		display: block;
 		clear: both;
 	}
@@ -370,7 +378,7 @@ main>article{
 	.lnb,
 	.aside{
 		float: right;
-		box-sizing: border-box;
+		box-sizing:border-box;
 		width: 180px;
 		position: relative;
 		left: 200px;
@@ -379,25 +387,13 @@ main>article{
 
 /* Desktop */
 @media (min-width:1025px){
-	.container{
-		max-width: 1280px;
-		margin: 0 auto;
-		position: relative;
-		padding : 0 10px;
-	}
-	.search{
-		top: 0;
-		right: 10px;
-	}
 	.body{
-		padding: 0 200px 0 220px; /*padding-left: 220px; padding-right: 200px; 과 같음*/
+		padding: 0 200px 0 220px;
 	}
 	main{
 		float: left;
 		width: 100%;
 		margin-right: -100%;
-		/*float이 left이든 right이든 상관 없지만
-		left일땐 margin-right을 줘야하고 right일땐 margin-left를 줘야함*/
 	}
 	.lnb,
 	.aside{
@@ -410,7 +406,20 @@ main>article{
 	}
 	.aside{
 		float: right;
-		width: 158px; /*box-sizing: border-box; width: 180px; 과 같음*/
+		width: 158px;
 		left: 200px;
 	}
+	.ctnr{
+		max-width: 1280px;
+		margin: 0 auto;
+		position: relative;
+		padding: 0 10px;
+	}
+	.search{
+		top: 0;
+		right: 10px;
+	}
 }
+
+
+
